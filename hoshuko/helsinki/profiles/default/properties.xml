@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<site>
+ <property name="title">ヘルシンキ日本語補習校 -- Helsingin Japanilainen Kouluyhdistys</property>
+  <property name="email_from_address"
+    type="string">helsinki@hoshuko.info</property>
+ <property name="email_from_name"
+    type="string">Helsingin Japanilainen Kouluyhdistys</property>
+</site>

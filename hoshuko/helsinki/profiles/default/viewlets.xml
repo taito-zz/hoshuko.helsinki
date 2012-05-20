@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<object>
+
+  <hidden manager="plone.portalheader" skinname="Terrafirma Theme" based-on="Plone Default">
+    <viewlet name="plone.personal_bar" />
+  </hidden>
+
+</object>

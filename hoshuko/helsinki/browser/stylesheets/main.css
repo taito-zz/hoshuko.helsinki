@@ -1,0 +1,40 @@
+#portal-column-two .visualPadding {
+    padding:1em 2em 1em 0;
+}
+
+#portal-footer {
+    background-image: none;
+    color: #dddddd;
+    margin: 0;
+    padding: 0;
+    position: none;
+}
+#portal-footer p{
+    text-align: right;
+    margin-right: 2em;
+}
+
+#portal-footer a{
+    color: #cccccc;
+}
+
+#portal-footer a:visited{
+    color: #aaaaaa;
+}
+
+#portal-footer a:hover{
+    color: #bbbbbb;
+}
+
+#portal-personaltools {
+    background-color: #FFFFFF;
+    border-bottom: none;
+    border-top: 1px solid #DADAD5;
+    color: #8C8C73;
+    line-height: 1.6em;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0 3em;
+    text-align: right;
+    text-transform: none;
+}

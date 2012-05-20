@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<object name="portal_properties" meta_type="Plone Properties Tool">
+ <object name="site_properties" meta_type="Plone Property Sheet">
+  <property name="default_language" type="string">ja</property>
+  <property name="calendar_starting_year" type="int">2008</property>
+  <property name="calendar_future_years_available" type="int">3</property>
+  <property name="webstats_js" type="string"></property>
+  <property name="external_links_open_new_window" type="string">True</property>
+ </object>
+</object>

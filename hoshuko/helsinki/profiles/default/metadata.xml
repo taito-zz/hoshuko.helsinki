@@ -1,0 +1,7 @@
+<metadata>
+  <description>This is the profile description</description>
+  <version>0</version>
+  <dependencies>
+    <dependency>profile-plonetheme.terrafirma:default</dependency>
+  </dependencies>
+</metadata>
