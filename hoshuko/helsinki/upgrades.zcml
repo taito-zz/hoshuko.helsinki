@@ -1,0 +1,17 @@
+<configure
+  i18n_domain="hoshuko.helsinki"
+  xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+  xmlns="http://namespaces.zope.org/zope"
+  >
+
+  <genericsetup:upgradeStep
+    description=""
+    destination="1"
+    handler="hoshuko.helsinki.upgrades.upgrade_0_to_1"
+    profile="hoshuko.helsinki:default"
+    sortkey="1"
+    source="0"
+    title="Reimport mailhost.xml and propertiestool.xml."
+    />
+
+</configure>

@@ -5,7 +5,6 @@
   xmlns="http://namespaces.zope.org/zope"
   >
 
-  <!-- <include package="plonetheme.terrafirma" /> -->
   <includeDependencies package="." />
 
   <genericsetup:registerProfile
@@ -15,5 +14,7 @@
     provides="Products.GenericSetup.interfaces.EXTENSION"
     title="hoshuko.helsinki"
     />
+
+  <include file="upgrades.zcml"/>
 
 </configure>

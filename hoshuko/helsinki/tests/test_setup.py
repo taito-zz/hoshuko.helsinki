@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
-
 from Products.CMFCore.utils import getToolByName
 from hoshuko.helsinki.tests.base import IntegrationTestCase
+
+
 class TestSetup(IntegrationTestCase):
 
     def setUp(self):
@@ -10,6 +11,29 @@ class TestSetup(IntegrationTestCase):
     def test_is_hoshuko_helsinki_installed(self):
         installer = getToolByName(self.portal, 'portal_quickinstaller')
         self.failUnless(installer.isProductInstalled('hoshuko.helsinki'))
+
+    def test_is_Maps_installed(self):
+        installer = getToolByName(self.portal, 'portal_quickinstaller')
+        self.failUnless(installer.isProductInstalled('Maps'))
+
+    def test_is_plonetheme_terrafirma_installed(self):
+        installer = getToolByName(self.portal, 'portal_quickinstaller')
+        self.failUnless(installer.isProductInstalled('plonetheme.terrafirma'))
+
+    def test_mailhost__smtp_host(self):
+        mailhost = getToolByName(self.portal, 'MailHost')
+        self.assertEqual(mailhost.smtp_host, 'smtp.nebula.fi')
+
+    def test_mailhost__smtp_port(self):
+        mailhost = getToolByName(self.portal, 'MailHost')
+        self.assertEqual(mailhost.smtp_port, 25)
+
+    def test_metadata__version(self):
+        setup = getToolByName(self.portal, 'portal_setup')
+        self.assertEqual(
+            setup.getVersionForProfile('profile-hoshuko.helsinki:default'),
+            u'1'
+        )
 
     ## properties.xml
     def test_portal_title(self):
@@ -20,6 +44,14 @@ class TestSetup(IntegrationTestCase):
 
     def test_portal_email_from_name(self):
         self.assertEquals("Helsingin Japanilainen Kouluyhdistys", self.portal.getProperty('email_from_name'))
+
+    def test_propertiestool__webstats_js(self):
+        properties = getToolByName(self.portal, 'portal_properties')
+        site_props = properties.site_properties
+        self.assertEqual(
+            site_props.getProperty('webstats_js'),
+            '<script type="text/javascript">\n\nvar _gaq = _gaq || [];\n_gaq.push([\'_setAccount\', \'UA-789306-7\']);\n_gaq.push([\'_trackPageview\']);\n\n(function() {\nvar ga = document.createElement(\'script\'); ga.type = \'text/javascript\'; ga.async = true;\nga.src = (\'https:\' == document.location.protocol ? \'https://ssl\' : \'http://www\') + \'.google-analytics.com/ga.js\';\nvar s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(ga, s);\n})();\n\n</script>'
+        )
 
     ## actions.xml
     def test_sitemap_action_installed(self):

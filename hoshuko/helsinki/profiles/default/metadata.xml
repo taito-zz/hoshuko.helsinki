@@ -1,7 +1,8 @@
 <metadata>
   <description>This is the profile description</description>
-  <version>0</version>
+  <version>1</version>
   <dependencies>
     <dependency>profile-plonetheme.terrafirma:default</dependency>
+    <dependency>profile-Products.Maps:default</dependency>
   </dependencies>
 </metadata>
